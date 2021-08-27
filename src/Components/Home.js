@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from "react-hook-form";
-
+import {Zoom, Fade} from 'react-reveal'
 
 
 
@@ -28,18 +28,20 @@ function Home() {
                 <div  >
 
                     <div className="text">
+                    <Fade left >
                         <h1>Počni trenirati već danas.</h1>
+                       
                         <p>Želiš <span>početi</span> trenirati i poboljšati zdravlje, ali nemaš <span>motivacije</span> ili <span>znanja</span>? Promjeni život na bolje i <span>javi</span> mi se za sastavljanje individualnih treninga. <span>Kreni već danas!</span>  </p>
 
                         <Link to="/kontakt" className="rounded-pill">Prijavi se!</Link>
+                        </Fade>
                     </div>
 
                 </div>
             </header>
-    
 
 
-
+<Fade left>
     <h2 className="bjelo">
         Zašto početi trenirati?
     </h2>
@@ -49,11 +51,12 @@ function Home() {
 
 
         <div className="row">
+          
             <div className="col boxshadow">
                 <h3>ZDRAVLJE</h3>
                 <p>Svaka fizička aktivnost je dobra za kardiovaskularni sustav,pospješuje lučenje dobrog kolesterola i smanjuje nezdrave trigliceride.</p>
             </div>
-
+           
             <div className="col boxshadow">
                 <h3>RASPOLOŽENJE</h3>
                 <p>Brojne kemikalije u mozgu se stimuliraju vježbom,što dovodi do osjećaja sreće,opuštenosti i smanjene anksioznosti i stresa.</p>
@@ -63,13 +66,15 @@ function Home() {
                 <h3>ENERGIJA</h3>
                 <p>Redovita tjelesna aktivnost može poboljšati snagu i izdržljivost opskrbom tkiva kisikom i hranjivim tvarima što pomaže srcu da radi učinkovitije i daje nam više energije.</p>
             </div>
-
+            
         </div>
 
     </article>
+    </Fade>
     <div className="zastoimg"></div>
 
-    <h2 className="bjelo">Zašto odabrati mene?</h2>
+    <Fade left>
+     <h2 className="bjelo">Zašto odabrati mene?</h2>
 
     <article className="container zastoja">
 
@@ -106,7 +111,7 @@ function Home() {
         </div>
 
     </article>
-
+    </Fade>
 
     <div className="bgcolor">
 
@@ -154,7 +159,7 @@ function Home() {
 
 
     <div className="formimg"></div>
- 
+ <Zoom>
     <div className="formwrapper">
         <div className="title">Prijavi se</div>
 
@@ -191,7 +196,7 @@ function Home() {
 
         </form>
     </div>
-
+    </Zoom>
    
 
     <footer>
@@ -203,8 +208,8 @@ function Home() {
         </div>
 
     </footer>
-
-
+  
+    
 </body>
 
     );
